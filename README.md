@@ -1,8 +1,8 @@
-# wirelessproject
+# Wireless project
 * Nichakorn   Wuthiphanphaiboon 6288023 sec2
 * Nutsongwat  Cheawka           6288066 sec2
 
-# buddycafes
+# Buddy Cafe
 
 A new Flutter project.
 
