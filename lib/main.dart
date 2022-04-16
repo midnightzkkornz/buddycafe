@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: appTheme,
       //initialRoute: '/login',
       debugShowCheckedModeBanner: false,
-      home: MySearch(), 
+      home: const MyLogin(), 
       routes: {
         // change route to "change pages"
         // '/home': (context) => const MyHome(),
