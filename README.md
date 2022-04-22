@@ -4,8 +4,8 @@
 
 # Buddy Cafe
 
-A BuddyCafe project.
-finding locations by using API MAP.
+* A BuddyCafe project.
+* finding locations by using API MAP.
 
 
 # Getting Started
