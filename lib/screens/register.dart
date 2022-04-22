@@ -1,5 +1,7 @@
 // found in the LICENSE file.
+import 'package:buddycafes/screens/home.dart';
 import 'package:flutter/material.dart';
+import 'package:buddycafes/screens/login.dart';
 
 class MyRegister extends StatefulWidget {
   const MyRegister({Key? key}) : super(key: key);
@@ -168,17 +170,23 @@ class MyRegisterState extends State<MyRegister> {
                         
                         // button back to sign-in --> (log-in page)
                         MaterialButton(
-                          onPressed: (){},
+                          onPressed: (){
+                                Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => MyHome()),);
+                              },
                           height: 45,
                           minWidth: 140,
                           color: Colors.green,
                           textColor: Colors.white,
-                          child: const Text('Back to Sign In', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),),
+                          child: const Text('Back to Home', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),),
                           shape: const StadiumBorder(), // curved edge
                         ),
 
                         MaterialButton(
-                          onPressed: (){},
+                          onPressed: (){
+                                Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => MyLogin()),);
+                              },
                           height: 45,
                           minWidth: 140,
                           color: const Color(0xff616161),

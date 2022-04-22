@@ -1,38 +1,28 @@
 class Cafe{
-  // ignore: non_constant_identifier_names
   final int petc_id;
-  // ignore: non_constant_identifier_names
   final String petc_name;
-  // ignore: non_constant_identifier_names
   final String petc_type;
-  // ignore: non_constant_identifier_names
   final String petc_info;
-  // ignore: non_constant_identifier_names
   final String petc_open;
-  // ignore: non_constant_identifier_names
   final String petc_phone_num;
-  // ignore: non_constant_identifier_names
   final String petc_image;
-  // ignore: non_constant_identifier_names
   final String petc_location;
+  final double petc_latitude;
+  final double petc_longitude;
+
+
 
   const Cafe({
-    // ignore: non_constant_identifier_names
     required this.petc_id,
-    // ignore: non_constant_identifier_names
     required this.petc_name,
-    // ignore: non_constant_identifier_names
     required this.petc_type,
-    // ignore: non_constant_identifier_names
     required this.petc_info,
-    // ignore: non_constant_identifier_names
     required this.petc_open,
-    // ignore: non_constant_identifier_names
     required this.petc_phone_num,
-    // ignore: non_constant_identifier_names
     required this.petc_image,
-    // ignore: non_constant_identifier_names
     required this.petc_location,
+    required this.petc_latitude,
+    required this.petc_longitude,
     } 
   ); 
 
@@ -45,6 +35,8 @@ class Cafe{
         petc_phone_num: json['petc_phone_num'],
         petc_image: json['petc_image'],
         petc_location: json['petc_location'],
+        petc_latitude: json['petc_latitude'],
+        petc_longitude: json['petc_longitude'],
       );
 
   Map<String, dynamic> toJson() => {
@@ -56,5 +48,7 @@ class Cafe{
         'petc_phone_num': petc_phone_num,
         'petc_image': petc_image,
         'petc_location': petc_location,
+        'petc_latitude': petc_latitude,
+        'petc_longitude': petc_longitude,
       };
 }

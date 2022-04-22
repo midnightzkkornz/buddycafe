@@ -2,13 +2,16 @@
 
 //import 'package:buddycafes/main.dart';
 //import 'package:buddycafes/screens/result.dart';
-import 'dart:html';
+// import 'dart:html';
 
 import 'package:flutter/material.dart';
 
 import 'package:buddycafes/widget/search_widget.dart';
 import 'package:buddycafes/models/cafe.dart';
 import 'package:buddycafes/data/cafe_data.dart';
+
+// google map
+import 'package:buddycafes/screens/map.dart';
 
 
 class MySearch extends StatefulWidget {
@@ -56,7 +59,7 @@ class MySearchState extends State<MySearch> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: const Text('Searchig BuddyCafe!'), // heading text
+          title: const Text('Searching BuddyCafe!'), // heading text
           centerTitle: true,
         ),
         body: Column(
@@ -84,7 +87,6 @@ class MySearchState extends State<MySearch> {
       );
 
   Widget buildCafe(Cafe cafe) => ListTile(
-    
         onTap: () {
           //buildResults;
           // push to result..
@@ -99,7 +101,7 @@ class MySearchState extends State<MySearch> {
           );
 
         }, // click on result 
-        leading: Image.network(
+        leading: Image.asset(
           cafe.petc_image,
           fit: BoxFit.cover,
           width: 50,
@@ -152,7 +154,7 @@ class MySearchState extends State<MySearch> {
               SizedBox(
                 height: 300,
                 width: double.infinity,
-                child: Image.network(cafe.petc_image),
+                child: Image.asset(cafe.petc_image),
               ),
 
               const SizedBox(
@@ -177,6 +179,25 @@ class MySearchState extends State<MySearch> {
             ],
           ),
         ),
+
+        floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Navigator.push(
+          //     context, MaterialPageRoute(builder: (context) => MyMap()));
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => MyMap(
+                pet_name: cafe.petc_name,
+                petc_lat: cafe.petc_latitude,
+                petc_log: cafe.petc_longitude,
+              ),
+            ),
+          );
+        },
+        tooltip: 'Map Cafe',
+        child: Icon(Icons.near_me),
+      ),
       );    
 
 

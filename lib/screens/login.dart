@@ -1,6 +1,8 @@
 // found in the LICENSE file.
+import 'package:buddycafes/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:buddycafes/screens/register.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -148,7 +150,10 @@ class MyLoginState extends State<MyLogin> {
                         children: [
                           // register
                           MaterialButton(
-                              onPressed: (){},
+                              onPressed: (){
+                                Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => MyRegister()),);
+                              },
                               height: 45,
                               minWidth: 140,
                               child: const Text('Register', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),),
@@ -159,7 +164,10 @@ class MyLoginState extends State<MyLogin> {
                           
                           // login
                           MaterialButton(
-                              onPressed: (){},
+                              onPressed: (){
+                                Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => MyHome()),);
+                              },
                               height: 45,
                               minWidth: 140,
                               child: const Text('Login', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),),

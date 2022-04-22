@@ -3,11 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:buddycafes/common/theme.dart';
 
-// import 'package:buddycafes/screens/home.dart';
+import 'package:buddycafes/screens/home.dart';
 import 'package:buddycafes/screens/login.dart';
-import 'package:buddycafes/screens/test.dart';
 import 'package:buddycafes/screens/register.dart';
-//import 'package:buddycafes/screens/result.dart';
 import 'package:buddycafes/screens/search.dart';
 
 void main() {
@@ -26,18 +24,16 @@ class MyApp extends StatelessWidget {
       theme: appTheme,
       //initialRoute: '/login',
       debugShowCheckedModeBanner: false,
-      home: const MyLogin(), 
+      home: MyHome(), 
       routes: {
         // change route to "change pages"
-        // '/home': (context) => const MyHome(),
+        '/home': (context) => MyHome(),
         '/login': (context) => const MyLogin(),
         '/register': (context) => const MyRegister(),
         '/search': (context) => MySearch(),
-        //'/result': (context) => MyResult(),
-        '/test': (context) => MyTest(),
       },
+      
     );
   }
-  
-}
 
+}
