@@ -1,12 +1,14 @@
 # Wireless project
-* Nichakorn   Wuthiphanphaiboon 6288023 sec2
-* Nutsongwat  Cheawka           6288066 sec2
+* Nichakorn   Wuthiphanphaiboon 6288023 Sec2
+* Nutsongwat  Cheawka           6288066 Sec2
 
 # Buddy Cafe
 
-A new Flutter project.
+A BuddyCafe project.
+finding locations by using API MAP.
 
-## Getting Started
+
+# Getting Started
 
 This project is a starting point for a Flutter application.
 
